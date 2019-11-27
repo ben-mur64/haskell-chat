@@ -18,3 +18,9 @@ data ChatMessage
 
 instance ToJSON ChatMessage
 instance FromJSON ChatMessage
+
+data NamedMessage = NamedMessage Text ChatMessage
+  deriving (Show, Read, Eq, Ord, Generic)
+
+instance ToJSON NamedMessage
+instance FromJSON NamedMessage
